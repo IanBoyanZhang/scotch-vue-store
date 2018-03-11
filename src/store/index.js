@@ -48,7 +48,7 @@ Vue.use(Vuex)
 //     }
 //   }
 // ]
-//
+
 // const manufacturers = [
 //   {
 //     id: 1,

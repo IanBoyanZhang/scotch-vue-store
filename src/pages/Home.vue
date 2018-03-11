@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="title">
-      <h1><i class="fa fa-braille"></i> In Stock</h1>
-    </div>
+    <!-- <div class="title"> -->
+      <!-- <h1><i class="fa fa-braille"></i> In Stock</h1> -->
+    <!-- </div> -->
     <product-list></product-list>
   </div>
 </template>
@@ -13,7 +13,7 @@
     name: 'home',
     data () {
       return {
-        msg: 'Welcome to Your Vue.js App'
+        msg: 'Welcome to Pasgo Plumbing'
       }
     },
     components: {

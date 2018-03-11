@@ -7,7 +7,7 @@
 
 <script>
   import {
-    ADD_TO_CART,
+    // ADD_TO_CART,
     REMOVE_FROM_CART
   } from '../../store/mutation-types'
   export default {
@@ -23,8 +23,9 @@
       }
     },
     methods: {
+      // TODO: Go to amazon
       addToCart () {
-        this.$store.commit(ADD_TO_CART, this.product)
+        // this.$store.commit(ADD_TO_CART, this.product)
       },
       removeFromCart (id) {
         this.$store.commit(REMOVE_FROM_CART, id)

@@ -26,7 +26,7 @@
     },
     data () {
       return {
-
+        test: 'TEST'
       }
     },
     components: {

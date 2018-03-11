@@ -1,6 +1,13 @@
+// import { mongo } from 'mongoose';
+
 require('./check-versions')()
 
 var config = require('../config')
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+
+var TaskSchema = new Schema
+
 if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 }
@@ -69,6 +76,7 @@ devMiddleware.waitUntilValid(function () {
 })
 
 // API
+
 
 module.exports = app.listen(port, function (err) {
   if (err) {

@@ -40,9 +40,9 @@
     padding: 30px 0;
   }
 
-  .product-details__image {
+  /* .product-details__image {
 
-  }
+  } */
 
   .product-details__description {
     padding-top: 30px;
