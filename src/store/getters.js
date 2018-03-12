@@ -1,9 +1,11 @@
+import {DB} from '../data/db'
 
 export const productGetters = {
   // allId: state => state.products.result,
   // entities: state => state.products.entities,
   allProducts: (state, getters) => {
-    return state.products
+    // return state.products
+    return DB.findAllProducts()
     // const result = getters.allId
     // const entities = getters.entities
     //

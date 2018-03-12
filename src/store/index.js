@@ -5,7 +5,8 @@ import Vuex from 'vuex'
 
 import { productGetters, manufacturerGetters } from './getters'
 import { productMutations, cartMutations, manufacturerMutations } from './mutations'
-import { productActions, manufacturerActions } from './actions'
+// import { productActions, manufacturerActions } from './actions'
+import { productActions } from './actions'
 // import actions from './actions'
 // import { productsSchema } from './schemas'
 
@@ -15,13 +16,17 @@ Vue.use(Vuex)
 //   {
 //     id: 1,
 //     manId: 3,
-//     name: 'Samsung S7 Edge',
+//     // name: 'Samsung S7 Edge',
+//     name: 'Product 1',
 //     price: 659,
-//     image: 'http://www.brandsmartusa.com/images/product/large/20208018.jpg',
-//     description: '5.5" Quad HD Super AMOLED | 12 MP Phase Detection Autofocus Rear Camera / 5 MP Front Facing Camera | Android Marshmallow 6.0 | Wi-Fi 802.11 a/b/g/n/ac, Dual-Band, Wi-Fi Direct, Hotspot | Water-Resistant Features an IP68 Rating (30 Min. In 1m Of Water) | Low-Light Camera | Expandable Storage Up To 200 GB | Samsung Pay',
+//     // image: 'http://www.brandsmartusa.com/images/product/large/20208018.jpg',
+//     image: 'https://s3-us-west-1.amazonaws.com/pasgo-plumbing/small_201812314027709.jpg',
+//     // description: '5.5" Quad HD Super AMOLED | 12 MP Phase Detection Autofocus Rear Camera / 5 MP Front Facing Camera | Android Marshmallow 6.0 | Wi-Fi 802.11 a/b/g/n/ac, Dual-Band, Wi-Fi Direct, Hotspot | Water-Resistant Features an IP68 Rating (30 Min. In 1m Of Water) | Low-Light Camera | Expandable Storage Up To 200 GB | Samsung Pay',
+//     description: '',
 //     manufacturer: {
 //       id: 3,
-//       name: 'Samsung'
+//       // name: 'Samsung'
+//       name: 'Stainless steel'
 //     }
 //   },
 //   {
@@ -52,15 +57,15 @@ Vue.use(Vuex)
 // const manufacturers = [
 //   {
 //     id: 1,
-//     name: 'Apple'
+//     name: 'Pasgo'
 //   },
 //   {
 //     id: 2,
-//     name: 'Sony'
+//     name: 'Pasgo'
 //   },
 //   {
 //     id: 3,
-//     name: 'Samsung'
+//     name: 'Pasgo'
 //   }
 // ]
 
@@ -77,5 +82,6 @@ export default new Vuex.Store({
   },
   mutations: Object.assign({}, productMutations, cartMutations, manufacturerMutations),
   getters: Object.assign({}, productGetters, manufacturerGetters),
-  actions: Object.assign({}, productActions, manufacturerActions)
+  // actions: Object.assign({}, productActions, manufacturerActions)
+  actions: Object.assign({}, productActions)
 })

@@ -19,12 +19,13 @@
     },
     computed: {
       product () {
+        // TODO: Adding product id result
         return this.$store.getters.productById(this.$route.params['id'])
       }
     },
     data () {
       return {
-//        product: this.$store.getters.productById(this.$route.params['id'])
+        // product: this.$store.getters.productById(this.$route.params['id'])
       }
     },
     components: {

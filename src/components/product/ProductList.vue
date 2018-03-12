@@ -16,17 +16,19 @@
     name: 'product-list',
     created () {
       if (this.products.length === 0) {
+        // console.log(this.products.length)
         this.$store.dispatch('allProducts')
       }
     },
     computed: {
+      // TODO: Use serialized product info
+      // V2-> setting up back end for persistent storage
       products () {
         return this.$store.getters.allProducts
       }
     },
     data () {
       return {
-        test: 'TEST'
       }
     },
     components: {

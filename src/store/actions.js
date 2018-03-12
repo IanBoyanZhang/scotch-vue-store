@@ -1,35 +1,39 @@
 import axios from 'axios'
+import {DB} from '../data/db'
 import {API_BASE} from '../config'
 
 import {
   ADD_PRODUCT,
   ADD_PRODUCT_SUCCESS,
-  PRODUCT_BY_ID,
-  PRODUCT_BY_ID_SUCCESS,
+  // PRODUCT_BY_ID,
+  // PRODUCT_BY_ID_SUCCESS,
   UPDATE_PRODUCT,
   UPDATE_PRODUCT_SUCCESS,
   REMOVE_PRODUCT,
   REMOVE_PRODUCT_SUCCESS,
   ALL_PRODUCTS,
-  ALL_PRODUCTS_SUCCESS,
-  ALL_MANUFACTURERS,
-  ALL_MANUFACTURERS_SUCCESS
+  ALL_PRODUCTS_SUCCESS
+  // ALL_MANUFACTURERS,
+  // ALL_MANUFACTURERS_SUCCESS
 } from './mutation-types'
 
 export const productActions = {
   allProducts ({commit}) {
     commit(ALL_PRODUCTS)
-    axios.get(`${API_BASE}/products`).then(response => {
-      commit(ALL_PRODUCTS_SUCCESS, response.data)
-    })
+    // axios.get(`${API_BASE}/products`).then(response => {
+      // commit(ALL_PRODUCTS_SUCCESS, response.data)
+    // })
+    commit(ALL_PRODUCTS_SUCCESS, DB.findAllProducts())
   },
-  productById ({commit}, payload) {
-    commit(PRODUCT_BY_ID)
-    axios.get(`${API_BASE}/products/${payload}`).then(response => {
-      console.log(payload, response.data)
-      commit(PRODUCT_BY_ID_SUCCESS, response.data)
-    })
-  },
+  // productById ({commit}, payload) {
+  //   commit(PRODUCT_BY_ID)
+  //   // axios.get(`${API_BASE}/products/${payload}`).then(response => {
+  //     // console.log(payload, response.data)
+  //     // commit(PRODUCT_BY_ID_SUCCESS, response.data)
+  //   // })
+  //   console.log(payload)
+  //   commit(PRODUCT_BY_ID_SUCCESS, DB.findProductById(payload))
+  // },
   addProduct ({commit}, payload) {
     commit(ADD_PRODUCT)
     axios.post(`${API_BASE}/products`, payload).then(response => {
@@ -51,11 +55,11 @@ export const productActions = {
   }
 }
 
-export const manufacturerActions = {
-  allManufacturers ({commit}) {
-    commit(ALL_MANUFACTURERS)
-    axios.get(`${API_BASE}/manufacturers`).then(response => {
-      commit(ALL_MANUFACTURERS_SUCCESS, response.data)
-    })
-  }
-}
+// export const manufacturerActions = {
+//   allManufacturers ({commit}) {
+//     commit(ALL_MANUFACTURERS)
+//     axios.get(`${API_BASE}/manufacturers`).then(response => {
+//       commit(ALL_MANUFACTURERS_SUCCESS, response.data)
+//     })
+//   }
+// }

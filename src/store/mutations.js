@@ -23,7 +23,6 @@ import {
 export const productMutations = {
   [ALL_PRODUCTS] (state) {
     state.showLoader = true
-    // this[]
   },
   [ALL_PRODUCTS_SUCCESS] (state, payload) {
     state.showLoader = false
